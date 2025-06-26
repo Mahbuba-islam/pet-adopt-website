@@ -7,28 +7,115 @@
     <!-- tailwind and daisi ui cdn link -->
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <!-- font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 </head>
 <body>
-
+    
     <!-- header start -->
-    <header>
+    <header class="container mx-auto my-6">
           <!-- navbar start -->
-        <nav>
-
-        </nav>
+        <div class="navbar">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a>Home</a></li>
+        <li><a>Shop</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+   <img src="./images/logo.webp" alt="">
+    <a class="btn btn-ghost text-xl font-bold">Peddy</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>Home</a></li>
+      <li>
+      <a>Shop</a>
+      </li>
+      <li><a>Contact</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <div class="ring-offset-base-100 w-8 h-8 rounded-full ring-2 ring-offset-2 flex justify-center items-center ">
+   <i class="fa-solid fa-user-tie "></i>
+  </div>
+  </div>
+</div>
          <!-- navbar end-->
+
+         <!-- banner --> 
+          <div class="my-12 space-y-4">
+            <div class="text-center space-y-2">
+             <h4 class="text-gray-600">Bringing Families Together ❤️‍🔥 
+           </h4>
+           <h1 class="text-xl font-extrabold  w-1/2 mx-auto"> Your Path to Adoption Starts Here</h1>
+           <p class="w-1/2 text-center mx-auto text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking 
+            at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+            <img class="w-1/2 mx-auto" src="./images/pet.webp" alt="">
+          </div>
+          <div class="mx-auto text-center space-y-2">
+            <h1 class="font-bold text-lg">Adopt  Your  Best Friend</h1>
+            <p class="w-1/2 mx-auto text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            The point of using Lorem Ipsum is that it has a.</p>
+          </div>
     </header>
     
      <!-- header end  -->
 
-
+   
 
     <!-- main section start -->
-   <main>
+   <main class="container mx-auto my-12">
+    <!-- category -->
+     <div id="category-container" class="grid grid-cols-2 lg:grid-cols-4 gap-y-4 mx-auto">
 
+     </div>
+      
+     <div class="flex md:justify-between justify-around items-center font-bold text-sm md:text-lg my-12 mx-auto">
+        <button>
+        Best Deals for You
+        </button>
+        <button class="btn font-bold md:text-lg text-sm">
+         sort by price
+        </button>
+     </div>
+     <!-- all cats cards -->
+      <div class="grid grid-cols-12 md:gap-12">
+       <div id="allPetsCards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-7 md:col-span-8 gap-8 lg:gap-12 mx-auto">
+    
+     </div>
+       <!-- cats all picture -->
+        <div  class="col-span-4 border border-gray-300 rounded-lg bg-white shadow-md">
+          <div id="likedPetsContainer" class="grid grid-cols-1 md:grid-cols-2">
+
+          </div>
+        </div>
+      </div>
+      
+      <!-- modal -->
+       <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="details_modal" class="modal">
+ 
+</dialog>
+
+<!-- adopt modal -->
+
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_adopt_modal" class="modal">
+ 
+</dialog>
    </main>
     <!-- main section end-->
-     
+
    
    <!-- footer -->
    <footer>
