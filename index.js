@@ -20,6 +20,7 @@ let allPets = []
 // fetch data with category
 
 const petByCategory = async(petName, button) => {
+  showSpinner()
     const url = `https://openapi.programming-hero.com/api/peddy/category/${petName}`
     const res = await fetch(url)
     const data = await res.json()
@@ -38,6 +39,7 @@ const petByCategory = async(petName, button) => {
 
 // fetch all pets data
 const fetchAllPets = async () => {
+  showSpinner()
     const url = 'https://openapi.programming-hero.com/api/peddy/pets'
     const res = await fetch(url)
     const data = await res.json()
@@ -215,6 +217,17 @@ const likedPets = (petImg,button) => {
 
    }
  
+//  add loading
+const showSpinner = () => {
+  const spinnerId = document.getElementById('spinner');
+  spinnerId.classList.remove('hidden');
+  setTimeout(() => {
+    spinnerId.classList.add('hidden');
+  }, 4000);
+};
+
+
+
 
 fetchAllPets()
  
