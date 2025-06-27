@@ -15,6 +15,7 @@ const fetchPetCategories = async () => {
   
 };
 
+let allPets = []
 
 // fetch data with category
 
@@ -22,7 +23,8 @@ const petByCategory = async(petName, button) => {
     const url = `https://openapi.programming-hero.com/api/peddy/category/${petName}`
     const res = await fetch(url)
     const data = await res.json()
-    displayAllPets(data.data, petName)
+    displayAllPets(data.data , petName)
+   
     // remove and add active color from all elements
      addAndremoveActiveColor(button,'activeBtn')
   }
@@ -39,7 +41,9 @@ const fetchAllPets = async () => {
     const url = 'https://openapi.programming-hero.com/api/peddy/pets'
     const res = await fetch(url)
     const data = await res.json()
+     allPets = data.pets
     displayAllPets(data.pets)
+     sortedPets(allPets)
 }
 
 //   display all pets
@@ -199,17 +203,20 @@ const likedPets = (petImg,button) => {
 
 
 
-   
+  //  sorted by price
+  const sortedPets = (allPets) => {
+    console.log(allPets.price)
+    const sortBtn =  document.getElementById('sortBtn')
+    sortBtn.addEventListener('click', ()=>{
+    const sorted = [...allPets].sort((a,b)=> a.price-b.price)
+     displayAllPets(sorted)
+  
+  })
 
+   }
+ 
 
-
-
-
-
-
-
-
-  fetchAllPets()
+fetchAllPets()
  
 
 fetchPetCategories()
