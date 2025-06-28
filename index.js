@@ -223,7 +223,7 @@ const showSpinner = () => {
   spinnerId.classList.remove('hidden');
   setTimeout(() => {
     spinnerId.classList.add('hidden');
-  }, 4000);
+  }, 1000);
 };
 
 
